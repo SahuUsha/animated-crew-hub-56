@@ -54,6 +54,7 @@
 }
 
 @layer utilities {
+  /* Animation delay utilities */
   .animation-delay-100 {
     animation-delay: 0.1s;
   }
@@ -72,8 +73,31 @@
   .animation-delay-600 {
     animation-delay: 0.6s;
   }
+  
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  /* Visibility for intersection observer animations */
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Enhanced animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -85,7 +109,38 @@
   }
 }
 
+@keyframes scale-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 .animate-fade-in {
   opacity: 0;
   animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  transform: scaleX(0);
+  animation: scale-in 0.8s ease-out forwards;
+}
+
+/* Text outline for hero headings */
+.text-outline {
+  text-shadow: 
+    -1px -1px 0 rgba(255,255,255,0.5),  
+    1px -1px 0 rgba(255,255,255,0.5),
+    -1px 1px 0 rgba(255,255,255,0.5),
+    1px 1px 0 rgba(255,255,255,0.5);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

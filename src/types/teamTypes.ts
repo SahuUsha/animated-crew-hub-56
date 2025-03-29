@@ -4,6 +4,7 @@ export interface SocialLinks {
   twitter?: string;
   github?: string;
   portfolio?: string;
+  instagram?: string;
 }
 
 export interface TeamMember {
