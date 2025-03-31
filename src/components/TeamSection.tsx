@@ -12,42 +12,47 @@ interface TeamSectionProps {
 
 const domainIcons: Record<string, string> = {
   technical: "💻",
-  'graphic design': "🎨",
-  social: "🌐",
-  'video edition': "🎬",
-  publicity: "📣",
+  'graphics': "🎨",
+  socials: "🌐",
+  'videography': "🎬",
+  'pr & content': "✍️",
+   events: "🎉",
 };
 
 const domainColors: Record<string, string> = {
   technical: "bg-blue-500",
-  'graphic design': "bg-purple-500",
-  social: "bg-green-500",
-  'video edition': "bg-red-500",
-  publicity: "bg-yellow-500",
+  'graphics': "bg-purple-500",
+  socials: "bg-green-500",
+  'videography': "bg-red-500",
+  'pr & content': "bg-yellow-500",
+   events: "bg-pink-500",
 };
 
 const domainGradients: Record<string, string> = {
   technical: "from-blue-50 via-blue-100 to-transparent",
-  'graphic design': "from-purple-50 via-purple-100 to-transparent",
-  social: "from-green-50 via-green-100 to-transparent",
-  'video edition': "from-red-50 via-red-100 to-transparent",
-  publicity: "from-yellow-50 via-yellow-100 to-transparent",
+  'graphics': "from-purple-50 via-purple-100 to-transparent",
+  socials: "from-green-50 via-green-100 to-transparent",
+  'videography': "from-red-50 via-red-100 to-transparent",
+  'pr & content': "from-yellow-50 via-yellow-100 to-transparent",
+   events: "from-pink-50 via-pink-100 to-transparent",
 };
 
 const domainBorderGradients: Record<string, string> = {
   technical: "from-blue-200 via-blue-400 to-blue-600",
-  'graphic design': "from-purple-200 via-purple-400 to-purple-600",
-  social: "from-green-200 via-green-400 to-green-600",
-  'video edition': "from-red-200 via-red-400 to-red-600",
-  publicity: "from-yellow-200 via-yellow-400 to-yellow-600",
+  'graphics': "from-purple-200 via-purple-400 to-purple-600",
+  socials: "from-green-200 via-green-400 to-green-600",
+  'videography': "from-red-200 via-red-400 to-red-600",
+  'pr & content': "from-yellow-200 via-yellow-400 to-yellow-600",
+   events: "from-pink-200 via-pink-400 to-pink-600",
 };
 
 const domainBackgrounds: Record<string, string> = {
   technical: "bg-gradient-to-br from-blue-50 via-blue-100 to-white",
-  'graphic design': "bg-gradient-to-br from-purple-50 via-purple-100 to-white",
-  social: "bg-gradient-to-br from-green-50 via-green-100 to-white",
-  'video edition': "bg-gradient-to-br from-red-50 via-red-100 to-white",
-  publicity: "bg-gradient-to-br from-yellow-50 via-yellow-100 to-white",
+  'graphics': "bg-gradient-to-br from-purple-50 via-purple-100 to-white",
+  socials: "bg-gradient-to-br from-green-50 via-green-100 to-white",
+  'videography': "bg-gradient-to-br from-red-50 via-red-100 to-white",
+  'pr & content': "bg-gradient-to-br from-yellow-50 via-yellow-100 to-white",
+   events: "bg-gradient-to-br from-pink-50 via-pink-100 to-white",
 };
 
 const TeamSection: React.FC<TeamSectionProps> = ({ domain, members, animationDelay = 0 }) => {
@@ -150,7 +155,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ domain, members, animationDel
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-center mb-20">
+        <div className="flex items-center justify-center mb-20 gap-8">
           <div className={`relative group`}>
             <div className={`w-20 h-20 rounded-2xl ${domainColors[domain]} text-white flex items-center justify-center text-4xl mr-6 shadow-xl transform transition-all duration-700
               ${isInView ? 'scale-100 rotate-0' : 'scale-0 rotate-90'}

@@ -162,7 +162,7 @@ export const teamData: TeamData = {
       }
     }
   ],
-  "events ": [
+  "events": [
     {
       id: 16,
       name: "Quinn Martinez",
