@@ -69,15 +69,41 @@ const Index = () => {
       {/* Main content */}
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center max-w-4xl mx-auto mb-20 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 relative inline-block">
-              <span className="relative z-10">Our Amazing Teams</span>
-              <span className="absolute -bottom-2 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 rounded-full"></span>
-            </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Meet the talented individuals who bring creativity, passion, and expertise 
-              to our different domains and make our GFG Student Chapter shine
-            </p>
+          {/* Animated title background */}
+          <div className="relative">
+            {/* Animated particles */}
+            <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+              {Array.from({ length: 15 }).map((_, index) => (
+                <div 
+                  key={index} 
+                  className="absolute rounded-full bg-gradient-to-r from-blue-300 to-purple-300 opacity-70"
+                  style={{
+                    width: `${Math.random() * 20 + 10}px`,
+                    height: `${Math.random() * 20 + 10}px`,
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
+                    animation: `float ${Math.random() * 5 + 3}s ease-in-out infinite`,
+                    animationDelay: `${Math.random() * 5}s`,
+                    transform: `translateY(${Math.sin(Date.now() / 1000 + index) * 10}px)`
+                  }}
+                />
+              ))}
+            </div>
+
+            {/* Animated gradient circle */}
+            <div className="absolute -z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 rounded-full bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 opacity-70 animate-pulse blur-3xl"></div>
+            
+            {/* Title with animated underline */}
+            <div className="text-center max-w-4xl mx-auto mb-20 animate-fade-in relative">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 relative inline-block">
+                <span className="relative z-10">Our Amazing Teams</span>
+                <span className="absolute -bottom-2 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 rounded-full animate-gradient-shift"></span>
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Meet the talented individuals who bring creativity, passion, and expertise 
+                to our different domains and make our GFG Student Chapter shine
+              </p>
+            </div>
           </div>
           
           {/* Enhanced floating navigation pills with active indicators */}
