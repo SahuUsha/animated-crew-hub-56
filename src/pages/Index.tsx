@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import TeamSection from '@/components/TeamSection';
 import Footer from '@/components/Footer';
@@ -88,7 +87,6 @@ const Index = () => {
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-green-100 via-teal-100 to-cyan-100 opacity-40 animate-pulse blur-3xl" style={{animationDelay: '1.5s'}}></div>
       </div>
       
-      {/* Main content */}
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-16">
           {/* Title with animated underline */}
@@ -118,7 +116,9 @@ const Index = () => {
                     key={domain}
                     href={`#${domainId}`}
                     className={`whitespace-nowrap px-6 py-3 rounded-full text-sm font-medium transition-all duration-500 relative group
-                      ${isActive ? 'text-white' : 'text-gray-700 hover:text-gray-900'}`}
+                      ${isActive 
+                        ? 'text-white' 
+                        : 'text-gray-700 hover:text-gray-900'}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <span className="relative z-10 transition-colors duration-500">
