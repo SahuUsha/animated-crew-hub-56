@@ -15,7 +15,7 @@ const domainIcons: Record<string, string> = {
   'graphics': "🎨",
   socials: "🌐",
   'videography': "🎬",
-  'pr & content': "✍️",
+  'pr & outreach': "✍️",
    events: "🎉",
 };
 
@@ -24,7 +24,7 @@ const domainColors: Record<string, string> = {
   'graphics': "bg-purple-500",
   socials: "bg-green-500",
   'videography': "bg-red-500",
-  'pr & content': "bg-yellow-500",
+  'pr & outreach': "bg-yellow-500",
    events: "bg-pink-500",
 };
 
@@ -33,7 +33,7 @@ const domainGradients: Record<string, string> = {
   'graphics': "from-purple-50 via-purple-100 to-transparent",
   socials: "from-green-50 via-green-100 to-transparent",
   'videography': "from-red-50 via-red-100 to-transparent",
-  'pr & content': "from-yellow-50 via-yellow-100 to-transparent",
+  'pr & outreach': "from-yellow-50 via-yellow-100 to-transparent",
    events: "from-pink-50 via-pink-100 to-transparent",
 };
 
@@ -42,7 +42,7 @@ const domainBorderGradients: Record<string, string> = {
   'graphics': "from-purple-200 via-purple-400 to-purple-600",
   socials: "from-green-200 via-green-400 to-green-600",
   'videography': "from-red-200 via-red-400 to-red-600",
-  'pr & content': "from-yellow-200 via-yellow-400 to-yellow-600",
+  'pr & outreach': "from-yellow-200 via-yellow-400 to-yellow-600",
    events: "from-pink-200 via-pink-400 to-pink-600",
 };
 
@@ -51,7 +51,7 @@ const domainBackgrounds: Record<string, string> = {
   'graphics': "bg-gradient-to-br from-purple-50 via-purple-100 to-white",
   socials: "bg-gradient-to-br from-green-50 via-green-100 to-white",
   'videography': "bg-gradient-to-br from-red-50 via-red-100 to-white",
-  'pr & content': "bg-gradient-to-br from-yellow-50 via-yellow-100 to-white",
+  'pr & outreach': "bg-gradient-to-br from-yellow-50 via-yellow-100 to-white",
    events: "bg-gradient-to-br from-pink-50 via-pink-100 to-white",
 };
 
