@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
-import { Linkedin, Twitter, Github, ExternalLink, Instagram } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 import { TeamMember } from '@/types/teamTypes';
 
 interface MemberCardProps {
@@ -56,24 +56,6 @@ const MemberCard: React.FC<MemberCardProps> = ({ member, animationDelay = 0, col
                         <Linkedin size={18} className="text-blue-600" />
                       </a>
                     )}
-                    {member.socialLinks?.twitter && (
-                      <a href={member.socialLinks.twitter} target="_blank" rel="noopener noreferrer" 
-                        className={`bg-white/90 rounded-full p-3 transition-all duration-500 shadow-lg transform
-                          ${isHovered ? 'translate-y-0 rotate-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                        style={{ transitionDelay: '0.2s' }}
-                      >
-                        <Twitter size={18} className="text-blue-400" />
-                      </a>
-                    )}
-                    {member.socialLinks?.github && (
-                      <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer" 
-                        className={`bg-white/90 rounded-full p-3 transition-all duration-500 shadow-lg transform
-                          ${isHovered ? 'translate-y-0 rotate-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                        style={{ transitionDelay: '0.3s' }}
-                      >
-                        <Github size={18} className="text-gray-800" />
-                      </a>
-                    )}
                     {member.socialLinks?.instagram && (
                       <a href={member.socialLinks.instagram} target="_blank" rel="noopener noreferrer" 
                         className={`bg-white/90 rounded-full p-3 transition-all duration-500 shadow-lg transform
@@ -83,15 +65,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ member, animationDelay = 0, col
                         <Instagram size={18} className="text-pink-600" />
                       </a>
                     )}
-                    {member.socialLinks?.portfolio && (
-                      <a href={member.socialLinks.portfolio} target="_blank" rel="noopener noreferrer" 
-                        className={`bg-white/90 rounded-full p-3 transition-all duration-500 shadow-lg transform
-                          ${isHovered ? 'translate-y-0 rotate-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                        style={{ transitionDelay: '0.5s' }}
-                      >
-                        <ExternalLink size={18} className="text-green-600" />
-                      </a>
-                    )}
+                    
                   </div>
                 </div>
               </div>

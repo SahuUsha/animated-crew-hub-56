@@ -1,9 +1,6 @@
 
 export interface SocialLinks {
   linkedin?: string;
-  twitter?: string;
-  github?: string;
-  portfolio?: string;
   instagram?: string;
 }
 
