@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import Hero from '@/components/Hero';
 import TeamSection from '@/components/TeamSection';
 import Footer from '@/components/Footer';
 import { teamData } from '@/data/teamData';
@@ -69,8 +68,6 @@ const Index = () => {
       
       {/* Main content */}
       <div className="relative z-10">
-        <Hero />
-        
         <div className="container mx-auto px-4 py-16">
           <div className="text-center max-w-4xl mx-auto mb-20 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 relative inline-block">
