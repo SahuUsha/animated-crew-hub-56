@@ -197,9 +197,6 @@ const TeamSection: React.FC<TeamSectionProps> = ({ domain, members, animationDel
         </div>
       </div>
       
-      {/* Enhanced wavy divider at the bottom */}
-      <div className="wavy-divider absolute bottom-0 left-0 right-0"></div>
-      
       {/* Animated corner decoration */}
       <div className={`absolute top-0 right-0 w-32 h-32 transform -translate-y-1/2 translate-x-1/2 rotate-45 opacity-30 bg-gradient-to-r ${domainBorderGradients[domain]} blur-lg animate-pulse`}></div>
       <div className={`absolute bottom-0 left-0 w-32 h-32 transform translate-y-1/2 -translate-x-1/2 rotate-45 opacity-30 bg-gradient-to-r ${domainBorderGradients[domain]} blur-lg animate-pulse`} style={{ animationDelay: '1s' }}></div>
